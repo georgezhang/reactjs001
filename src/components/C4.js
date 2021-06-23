@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from "react";
-import MeMo from './c4.memo';
+import MeMo from './C4.memo';
 
 const loadBigData = (maxNum) => {
   let arr = [];

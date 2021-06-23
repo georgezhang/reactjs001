@@ -9,10 +9,11 @@ import { Link, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import "./styles.css";
-import C1 from "./components/c1";
-import C2 from "./components/c2";
-import C3 from "./components/c3";
-import C4 from "./components/c4";
+import C1 from "./components/C1";
+import C2 from "./components/C2";
+import C3 from "./components/C3";
+import C4 from "./components/C4";
+import C5 from "./components/C5";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,6 +50,9 @@ export default function App() {
             <Link component={RouterLink} to="/demo4">
               测试 4
             </Link>
+            <Link component={RouterLink} to="/demo5">
+              测试 5
+            </Link>
           </Typography>
           <Switch>
             <Route path="/demo1">
@@ -70,8 +74,13 @@ export default function App() {
             </Route>
             <Route path="/demo4">
               <h1>测试 4</h1>
-              <h2>重复render</h2>
+              <h2>重复render with memo</h2>
               <C4 />
+            </Route>
+            <Route path="/demo5">
+              <h1>测试 5</h1>
+              <h2>render 两次,为什么呢？</h2>
+              <C5 />
             </Route>
             <Route path="/">
               <h1>欢迎来到ReactJS学习群</h1>
