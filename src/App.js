@@ -14,6 +14,7 @@ import C2 from "./components/C2";
 import C3 from "./components/C3";
 import C4 from "./components/C4";
 import C5 from "./components/C5";
+import C6 from "./components/C6";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,6 +54,9 @@ export default function App() {
             <Link component={RouterLink} to="/demo5">
               测试 5
             </Link>
+            <Link component={RouterLink} to="/demo6">
+              测试 6
+            </Link>
           </Typography>
           <Switch>
             <Route path="/demo1">
@@ -81,6 +85,11 @@ export default function App() {
               <h1>测试 5</h1>
               <h2>render 两次,为什么呢？</h2>
               <C5 />
+            </Route>
+            <Route path="/demo6">
+              <h1>测试 6</h1>
+              <h2>useEffect理解</h2>
+              <C6 />
             </Route>
             <Route path="/">
               <h1>欢迎来到ReactJS学习群</h1>
