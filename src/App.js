@@ -15,6 +15,7 @@ import C3 from "./components/C3";
 import C4 from "./components/C4";
 import C5 from "./components/C5";
 import C6 from "./components/C6";
+import C7 from "./components/C7";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,6 +58,9 @@ export default function App() {
             <Link component={RouterLink} to="/demo6">
               测试 6
             </Link>
+            <Link component={RouterLink} to="/demo7">
+              测试 7
+            </Link>
           </Typography>
           <Switch>
             <Route path="/demo1">
@@ -90,6 +94,11 @@ export default function App() {
               <h1>测试 6</h1>
               <h2>useEffect理解</h2>
               <C6 />
+            </Route>
+            <Route path="/demo7">
+              <h1>测试 7</h1>
+              <h2>useState</h2>
+              <C7 />
             </Route>
             <Route path="/">
               <h1>欢迎来到ReactJS学习群</h1>
